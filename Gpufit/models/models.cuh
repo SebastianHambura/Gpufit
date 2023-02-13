@@ -19,6 +19,8 @@
 #include "stokes.cuh"
 #include "poly2.cuh"
 #include "cauchy_lorentz_1d.cuh"
+#include "double_lorentzian_1d.cuh"
+#include "double_lorentzian_1d_rel.cuh"
 
 __device__ void calculate_model(
     ModelID const model_id,
@@ -88,6 +90,12 @@ __device__ void calculate_model(
     case STOKES:
         calculate_stokes(parameters, n_fits, n_points, value, derivative, point_index, fit_index, chunk_index, user_info, user_info_size);
         break;
+    case DOUBLE_LORENTZIAN_1D:
+        calculate_double_lorentzian_1d(parameters, n_fits, n_points, value, derivative, point_index, fit_index, chunk_index, user_info, user_info_size);
+        break;
+    case DOUBLE_LORENTZIAN_1D_REL:
+        calculate_double_lorentzian_1d_rel(parameters, n_fits, n_points, value, derivative, point_index, fit_index, chunk_index, user_info, user_info_size);
+        break;
     default:
         assert(0); // unknown model ID
     }
@@ -111,10 +119,12 @@ void configure_model(ModelID const model_id, int & n_parameters, int & n_dimensi
     case SPLINE_3D_MULTICHANNEL:         n_parameters = 5; n_dimensions = 4; break;
     case SPLINE_3D_PHASE_MULTICHANNEL:   n_parameters = 6; n_dimensions = 4; break;
         //Custom added Functions
-    case STOKES:                n_parameters = 4; n_dimensions = 1; break;
-    case ANTI_STOKES:           n_parameters = 4; n_dimensions = 1; break;
-    case POLY2:                 n_parameters = 3; n_dimensions = 1; break;
-    case CAUCHY_LORENTZ_1D:     n_parameters = 4; n_dimensions = 1; break;
+    case STOKES:                    n_parameters = 4; n_dimensions = 1; break;
+    case ANTI_STOKES:               n_parameters = 4; n_dimensions = 1; break;
+    case POLY2:                     n_parameters = 3; n_dimensions = 1; break;
+    case CAUCHY_LORENTZ_1D:         n_parameters = 4; n_dimensions = 1; break;
+    case DOUBLE_LORENTZIAN_1D:      n_parameters = 7; n_dimensions = 1; break;
+    case DOUBLE_LORENTZIAN_1D_REL:  n_parameters = 7; n_dimensions = 1; break;
     default: throw std::runtime_error("unknown model ID");
     }
 }

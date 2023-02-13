@@ -20,7 +20,9 @@ enum ModelID {
     ANTI_STOKES = 13,
     STOKES = 14,
     POLY2 = 15,
-    CAUCHY_LORENTZ_1D = 16
+    CAUCHY_LORENTZ_1D = 16,
+    DOUBLE_LORENTZIAN_1D = 17,
+    DOUBLE_LORENTZIAN_1D_REL = 18
 };
 
 // estimator ID

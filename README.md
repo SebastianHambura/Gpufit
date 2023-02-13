@@ -1,4 +1,10 @@
-Changes made from the original : added 2nd degree polynomial, lorentzian and 2 version of broadened Brillouin lineshape functions.  
+#Changes made from the original :
+
+- added 2 versions of double peak lorentzian (=sum of 2 1D lorentzian).  
+The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [SBS GPU acceleration](https://github.com/prevedel-lab/sbs-gpu-acceleration)
+under the supervision of Carlo Bevilacqua.
+
+- added 2nd degree polynomial, lorentzian and 2 version of broadened Brillouin lineshape functions.  
 The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [GPU accelerated Brillouin microscopy](https://git.embl.de/hambura/brillouin-gpu-acceleration)
 under the supervision of Carlo Bevilacqua.
 
