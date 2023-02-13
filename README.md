@@ -1,11 +1,12 @@
-#Changes made from the original :
+# Changes made from the original :
 
 - added 2 versions of double peak lorentzian (=sum of 2 1D lorentzian).  
-The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [SBS GPU acceleration](https://github.com/prevedel-lab/sbs-gpu-acceleration)
-under the supervision of Carlo Bevilacqua.
+To compile with Matlab bindings, I had to do the following :  
+``` cmake -D Matlab_ROOT_DIR="C:\Program Files\MATLAB\R2021b" ```
+The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [SBS GPU acceleration](https://github.com/prevedel-lab/sbs-gpu-acceleration) for a project from Fan Yang.
 
 - added 2nd degree polynomial, lorentzian and 2 version of broadened Brillouin lineshape functions.  
-The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [GPU accelerated Brillouin microscopy](https://git.embl.de/hambura/brillouin-gpu-acceleration)
+The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [GPU accelerated Brillouin microscopy]https://github.com/prevedel-lab/brillouin-gpu-acceleration)
 under the supervision of Carlo Bevilacqua.
 
 # Gpufit
