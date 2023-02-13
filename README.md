@@ -2,7 +2,7 @@
 
 - added 2 versions of double peak lorentzian (=sum of 2 1D lorentzian).  
 To compile with Matlab bindings, I had to do the following :  
-``` cmake -D Matlab_ROOT_DIR="C:\Program Files\MATLAB\R2021b" ```
+``` cmake -D Matlab_ROOT_DIR="C:\Program Files\MATLAB\R2021b" ```  
 The changes were made by Sebastian Hambura, from the [Prevedel lab](https://www.prevedel.embl.de/) for [SBS GPU acceleration](https://github.com/prevedel-lab/sbs-gpu-acceleration) for a project from Fan Yang.
 
 - added 2nd degree polynomial, lorentzian and 2 version of broadened Brillouin lineshape functions.  
